@@ -1,5 +1,11 @@
 # COVID-19-AI-Analysis
+
+- [ ] 台湾 改成 台湾（中国）/ 直接合并数据
+
 # 开源信息
+https://www.nature.com/articles/s41597-020-0448-0
+
+
 We collected data on the following:
 - (a) Key dates, which include the date of onset of disease, date of admission to hospital, date of confirmation of infection, and dates of travel. 
 - (b) Demographic information about the age and sex of patients/cases.
@@ -134,3 +140,63 @@ data.json
 Github Latestdata
 
 Kaggle：
+COVID-19 Literature Clustering
+
+
+
+
+# Data Dictionary
+
+## Variable Names
+
+| Variable                   | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| `id`                       | Unique identifier of case                                                   |
+| `case_in_country`          | 随着病例序号增加，除了中国以外的其他国家病例累计个数                             |
+| `reporting date`           | 报告时间                                                                     |
+| `Unnamed: 3`               | 第三列空白无内容 case                                                         |
+| `summary`                  | 大致情况描述，比如：武武汉居民，性别，什什么时间出现在过什么地方信息比较杂         |
+| `location`                 | 所在位置（城市名）                                                            |
+| `country`                  | 国家                                                                         |
+| `gender`                   | 性别                                                                         |
+| `age`                      | 年龄                                                                         |
+| `symptom_onset`            | 值是一个时间（但是格式不规范要统一化）                                          |
+| `If_onset_approximated`    | 发病时间是否为近似值（NA/0/1）                                                 |
+| `hosp_visit_date`          | 医院就诊日期                                                                  |
+| `exposure_start`           | 接触病毒的起始日期                                                             |
+| `exposure_end`             | 接触病毒的结束日期（Na/日期）                                                   |
+| `from Wuhan`               | 是否来自武汉（0/1/NA）                                                         |
+| `death`                    | 是否死亡（0/1/日期）                                                             |
+| `'recovered`               | 是否康复（0/1/日期）                                                             |
+| `'symptom`                 | 症状（无数据/fever, abdominal pain, diarrhea等逗号隔开）                                                   |
+| `source`                   | 消息来源（值为一些新闻媒体，有中文和英文，无其他文字）                                                   |
+| `link`                     | 来源链接（均为URL）                                                   |
+
+
+## Variable Coding
+
+| Variable                   | Code                                                                           |
+|----------------------------|--------------------------------------------------------------------------------|
+| `id`                       | Integer                                                                        |
+| `age`                      | String: `AGE` or `AGE-AGE` where `AGE` matches `[0-9]{1,2}`                    |
+| `sex`                      | String: either `male` or `female`                                              |
+| `city`                     | String                                                                         |
+| `province`                 | String                                                                         |
+
+## Missing Codes
+
+| Value | Meaning            |
+|-------|--------------------|
+| NA    | Data not available |
+
+## Data Completeness
+
+| Variable                   | Proportion Complete | Dataset                        |
+|----------------------------|---------------------|--------------------------------|
+| `id`                       |            1.000000 | `data/clean-hubei.csv`         |
+| `id`                       |            1.000000 | `data/clean-outside-hubei.csv` |
+| `age`                      |            0.023187 | `data/clean-hubei.csv`         |
+| `age`                      |            0.094852 | `data/clean-outside-hubei.csv` |
+| `sex`                      |            0.009768 | `data/clean-hubei.csv`         |
+| `sex`                      |            0.088418 | `data/clean-outside-hubei.csv` |
+| `city`                     |            1.000000 | `data/clean-hubei.csv`         |
