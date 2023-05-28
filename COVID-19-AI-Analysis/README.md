@@ -131,6 +131,6 @@ data.json
 
 
 数据版本：
-Github Latestdata
-
+Github Latestdata（官方最新数据下载）
+https://github.com/beoutbreakprepared/nCoV2019/tree/master/latest_data
 Kaggle：
