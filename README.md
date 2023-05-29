@@ -167,8 +167,8 @@ COVID-19 Literature Clustering
 | `exposure_end`             | 接触病毒的结束日期（Na/日期）                                                   |
 | `from Wuhan`               | 是否来自武汉（0/1/NA）                                                         |
 | `death`                    | 是否死亡（0/1/日期）                                                             |
-| `'recovered`               | 是否康复（0/1/日期）                                                             |
-| `'symptom`                 | 症状（无数据/fever, abdominal pain, diarrhea等逗号隔开）                                                   |
+| `recovered`               | 是否康复（0/1/日期）                                                             |
+| `symptom`                 | 症状（无数据/fever, abdominal pain, diarrhea等逗号隔开）                                                   |
 | `source`                   | 消息来源（值为一些新闻媒体，有中文和英文，无其他文字）                                                   |
 | `link`                     | 来源链接（均为URL）                                                   |
 
